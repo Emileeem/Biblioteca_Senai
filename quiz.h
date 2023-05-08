@@ -18,11 +18,20 @@ char Quiz(char Genero)
     //[8] =  Biografia
 
     system("Clear"); //cabeçalho do quiz
-    puts("Olá, bem vindo ao nosso Quiz!\n");
-    puts("Sinta-se à vontade para responder as perguntas com calma, para que assim possamos fazer com que você descubra o gênero literário ideal para você");
+    puts("\n                                                _____________________________________");
+    puts("                                                ||  Olá, bem vindo ao nosso Quiz!  ||");
+    puts("                                                _____________________________________\n");
+    puts("====================================================================================================================================================");
+    puts("||Sinta-se à vontade para responder as perguntas com calma, para que assim possamos fazer com que você descubra o gênero literário ideal para você||");
+    puts("====================================================================================================================================================");
+    puts("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 
-    puts("\n==========PERGUNTAS===========\n"); //Primeira pergunta
-    printf("Entre os filmes abaixo, qual lhe chamou mais atenção?(Digite o número referente)\n1 - Avatar: O Caminho da Água\n2 - Clube da Luta\n3 - O Mapa das Pequenas Coisas Perfeitas\n4 - Interestelar\n5 - O Dia do Atentado\n6 - Sorria\n7 - A Cinco Passos de Você\n8 - Harry Potter e a Pedra Filosofal\n9 - O Jogo da Imitação\n :");
+    puts("                                                 ==================================");
+    puts("\n                                                 ==========||PERGUNTAS||===========\n"); //Primeira pergunta
+    puts("                                                 ==================================");
+
+    puts("==========================================================================================================================\n");
+    printf("Entre os filmes abaixo, qual lhe chamou mais atenção?(Digite o número referente)\n1 - Avatar: O Caminho da Água\n____________________________________\n2 - Clube da Luta\n____________________________________\n3 - O Mapa das Pequenas Coisas Perfeitas\n____________________________________\n4 - Interestelar\n____________________________________\n5 - O Dia do Atentado\n____________________________________\n6 - Sorria\n____________________________________\n7 - A Cinco Passos de Você\n____________________________________\n8 - Harry Potter e a Pedra Filosofal\n____________________________________\n9 - O Jogo da Imitação\n____________________________________\n :");
     scanf("%d", &num_Esc);
 
     if(num_Esc == 1){
@@ -53,7 +62,8 @@ char Quiz(char Genero)
         generos[8] +=2;
     }
     system("Clear"); //segunda pergunta
-    printf("Qual o motivo principal de sua leitura?(Digite o número referente)\n1 - Para sentir emoções\n2 - Para sentir medo ou curiosidade\n3 - Para me distrair desse mundo\n4 - Apenas para não perder o hábito\n5 - Apenas leio em casos de querer aprender algo\n6 - Gosto de me sentir como se investigasse alguma coisa\n7 - Consigo me imaginar no livro, fazendo com que ame ler a adrenalina e as aventuras\n8 - Adoro uma história de amor com muitos dramas e reflexões\n9 - Gosto de rir, além de me prender a história\n :  ");
+    puts("==========================================================================================================================\n");
+    printf("Qual o motivo principal de sua leitura?(Digite o número referente)\n1 - Para sentir emoções\n____________________________________\n2 - Para sentir medo ou curiosidade\n____________________________________\n3 - Para me distrair desse mundo\n____________________________________\n4 - Apenas para não perder o hábito\n____________________________________\n5 - Apenas leio em casos de querer aprender algo\n____________________________________\n6 - Gosto de me sentir como se investigasse alguma coisa\n____________________________________\n7 - Consigo me imaginar no livro, fazendo com que ame ler a adrenalina e as aventuras\n____________________________________\n8 - Adoro uma história de amor com muitos dramas e reflexões\n____________________________________\n9 - Gosto de rir, além de me prender a história\n____________________________________\n :  ");
     scanf("%d", &num_Esc);
 
     if (num_Esc == 1)
@@ -111,7 +121,8 @@ char Quiz(char Genero)
         generos[6] += 1; //Romance
     }
     system("Clear"); // terceira pergunta
-    printf("Qual o sentimento que você acha que combina mais com você?(Digite o número referente)\n1 - Ciências e Humor inteligente\n2 - Sentimentos e Psicologia\n3 - Magia e Sobrenatural\n :  ");
+    puts("==========================================================================================================================\n");
+    printf("Qual o sentimento que você acha que combina mais com você?(Digite o número referente)\n____________________________________\n1 - Ciências e Humor inteligente\n____________________________________\n2 - Sentimentos e Psicologia\n____________________________________\n3 - Magia e Sobrenatural\n____________________________________\n :  ");
     scanf("%d", &num_Esc);
 
     if(num_Esc == 1)
@@ -154,138 +165,246 @@ char Quiz(char Genero)
         printf("Uau! Os gêneros selecionados para você foram: ");
         if(generos[0] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("\nParece que você gosta de adrenalina e para isso nós recomendamos o gênero: \nAção e aventura\n");
+            puts("==========================================================================================================================\n");
 
             if(generos[1] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[2] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[3] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[4] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[5] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[6] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[7] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
         if(generos[1] == maior)
         {
             if(generos[2] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[3] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[4] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[5] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("\n==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[6] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[7] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
         if(generos[2] == maior)
         {
             if(generos[3] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[4] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[5] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[6] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[7] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
         if(generos[3] == maior)
         {
             if(generos[4] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[5] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[6] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[7] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
         if(generos[4] == maior)
@@ -293,62 +412,112 @@ char Quiz(char Genero)
 
             if(generos[5] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[6] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[7] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
         if(generos[5] == maior)
         {
             if(generos[6] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[7] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nUm toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
         if(generos[6] == maior)
         {
             if(generos[7] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
             }
             else if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nUma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
         if(generos[7] == maior)
         {
             if(generos[8] == maior2)
             {
+                puts("==========================================================================================================================\n");
                 printf("\nVive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+                puts("==========================================================================================================================\n");
+
+                puts("\n==========================================================================================================================\n");
                 printf("\nQuer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+                puts("==========================================================================================================================\n");
             }
         }
     }
@@ -357,39 +526,57 @@ char Quiz(char Genero)
     {
         if(generos[0] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("\nParece que você gosta de adrenalina e para isso nós recomendamos o gênero: \nAção e aventura\n");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[1] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("\nVocê é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[2] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("\nNão larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[3] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("\nA melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[4] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("\nAdora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[5] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("Um toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[6] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("Uma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[7] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("Vive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[8] == maior)
         {
+            puts("==========================================================================================================================\n");
             printf("Quer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+            puts("==========================================================================================================================\n");
         }
     }
     
@@ -397,39 +584,57 @@ char Quiz(char Genero)
     {
         if(generos[0] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("Parece que você gosta de adrenalina e para isso nós recomendamos o gênero: \nAção e aventura\n");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[1] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("Você é do tipo que gosta de algo mais calmo, podemos recomendar os queridinhos da galera: Clássicos");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[2] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("Não larga a mão de uma boa história de amor e gosta muito de dar risada, não é? Seu gênero do dia é: Comédia Romântica");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[3] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("A melhor coisa para se fazer em um dia de chuva é tomar um chocolate quente e ler um livro, que tal o gênero: Drama");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[4] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("Adora um suspense no ar, mas o clima de investigação é muito bom para racionalidade, vamos sugerir: Policial");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[5] == maior2)
         {
-           printf("Um toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+            puts("==========================================================================================================================\n");
+            printf("Um toque de suspense não pode falhar, mas tudo fica ainda melhor quando o terror está logo ali, que tal o gênero: Suspense e Terror");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[6] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("Uma história bem trabalhada, talvez de época é o melhor do que você pode pedir hoje, o gênero que te escolheu foi: Romance");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[7] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("Vive no mundo da lua e adora um mundo cheio de novas aventuras e seres diferentes para se descobrir, a sugestão do dia é: Ficção e Fantasia");
+            puts("==========================================================================================================================\n");
         }
         else if(generos[8] == maior2)
         {
+            puts("==========================================================================================================================\n");
             printf("Quer aprender com o conhecimento dos outros, talvez para que não seja passado para trás, mas também pode ser considerado muito inteligente por seus próximos, o gênero escolhido para você é: Biografia");
+            puts("==========================================================================================================================\n");
         }
     }
 }
