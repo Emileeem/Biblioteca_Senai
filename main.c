@@ -1,49 +1,44 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <locale.h>
 int main(void) {
-
+  setlocale(LC_ALL,"Portuguese");
   // CPFs dos administradores
-  char cpf1[11] = {"12345678912"};
-  char cpf2[11] = {"98765432198"};
-  char cpf3[11] = {"32165498732"};
-  char cpfInserido[20];
-  int i, j, op;
-  
-  printf("           ╔═════════╗          \n"
-         " ╔═════════╣   Cpf   ╠═════════╗\n"
-         "           ╚═════════╝          \n"
-         "                                \n"
-         "   Insira seu CPF: ");      
-  scanf("%s", cpfInserido);
+  system("color 0f");
+  char cpf1[12] = {"12345678912"};
+  char cpf2[12] = {"98765432198"};
+  char cpf3[12] = {"32165498732"};
+  char cpfInserido[20], limpa[2];
+  int i, j, selecaoAdm, selecaoCliente, op, flagMain = 1,flagAdm = 1, FlagCadastro = 1;
 
-  // Validação dos CPFs (Administradores ou Clientes)
-  if((strcmp(cpfInserido, cpf1) == 0) || 
-     (strcmp(cpfInserido, cpf2) == 0) ||
-     (strcmp(cpfInserido, cpf3) == 0))
+  while(flagMain != 0)
   {
-    system("clear");
-    printf("                  ╔════════════════════╗                  \n"
-           "╔═════════════════║ Menu Administrador ║═════════════════╗\n"
-           "║                 ╚════════════════════╝                 ║\n"
-           "║                                                        ║\n"
-           "║ Digite < 1 > para cadastrar um livro.                  ║\n"
-           "║ Digite < 2 > para verificar os dados da biblioteca.    ║\n"
-           "╚════════════════════════════════════════════════════════╝\n"
-  );
+    printf("|=======================================|\n");
+    printf("|                                       |\n");
+    printf("|          TAFELDROS LIBRARY            |\n");
+    printf("|                                       |\n");
+    printf("|=======================================|\n");
+    printf("                              <0> Sair     \n\n");
+    printf("    Insira seu Cpf: ");
+    scanf("%s", cpfInserido);
+
+  // Valida��o dos CPFs (Administradores ou Clientes)
+  if ((strcmp(cpfInserido, cpf1) == 0) ||
+      (strcmp(cpfInserido, cpf2) == 0) ||
+      (strcmp(cpfInserido, cpf3) == 0))
+    {
+    system("cls");
+    system("menuAdm.exe");
+    flagMain = 0;
+    }
+    else
+    {
+        system("cls");
+        system("menuCliente.exe");
+        flagMain = 0;
+    }
+
   }
-  else
-  { 
-    system("clear");
-    printf("                   ╔══════════════╗                     \n"
-           "╔══════════════════║ Menu Cliente ║════════════════════╗\n"
-           "║                  ╚══════════════╝                    ║\n"
-           "║                                                      ║\n"
-           "║ Digite < 1 > para entrar na aba de pesquisa.         ║\n"
-           "║ Digite < 2 > se ainda está em dúvida do que ler.     ║\n"
-           "╚══════════════════════════════════════════════════════╝\n"
-  );
-  }
-  
   return 0;
 }
+
