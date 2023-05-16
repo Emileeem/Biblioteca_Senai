@@ -121,7 +121,7 @@ void emprestimo( char titulo_para_emprestar [99], int tamanhotxt)
 
 int main (void)
 {
-    int opcao = 0, i;
+    int opcao = 0, i, contador_print=0;
     int flagCliente = 1,flagPesquisa = 1;
     const unsigned MAXIMO = 2000;
     char limpa[2];
@@ -129,8 +129,7 @@ int main (void)
     char * possui;
     char * filename = "livros.txt";
     char * verifica_status;
-
-
+    char * print_sinopse;
     START:
     while(flagPesquisa != 0)
         {
@@ -242,11 +241,20 @@ int main (void)
                                     else if(escolha != 0)
                                         {
                                             system("cls");
-                                            printf("Título: %s    Ano: %s\nAutor: %s    Gênero: %s    Status: %s\nSinopse: %s\n", titulos[escolha-1], anos[escolha-1], autores[escolha-1], generos[escolha-1], status[escolha-1], sinopses[escolha-1]);
+                                            printf("Título: %s    Ano: %s\nAutor: %s    Gênero: %s    Status: %s\n", titulos[escolha-1], anos[escolha-1], autores[escolha-1], generos[escolha-1], status[escolha-1]);
+                                            print_sinopse = strtok(sinopses[escolha-1], " ");
+                                            while( print_sinopse != NULL ){
+                                                        if( contador_print%17 == 0 )
+                                                        {
+                                                            printf("\n");
+                                                        }
+                                                        printf("%s ", print_sinopse);
+                                                        print_sinopse = strtok(NULL, " ");
+                                                        contador_print++;}
                                             verifica_status = strstr(status[escolha-1], "Disponível\n");
                                             if (verifica_status)
                                                 {
-                                                    printf("\n\t\t\t\t\t\t\t\t\tDigite < 0 > para voltar.\n\t\t\t\t\t\t\t\t\tDigite < 1 > para emprestar o livro.\n");
+                                                    printf("\n\n\t\t\t\t\t\t\t\t\tDigite < 0 > para voltar.\n\t\t\t\t\t\t\t\t\tDigite < 1 > para emprestar o livro.\n");
                                                 }
                                             else
                                                 {
