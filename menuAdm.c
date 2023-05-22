@@ -27,14 +27,19 @@ main(){
 
     switch(op){ /// Interação com o menu
 
+    case 0: ///Finalizar Programa
+    flagAdm=0;
+    printf("Programa finalizado.");
+    break;
+
     case 1: /// Produtos
         system("cadastro.exe");
     break;
 
-    case 0: ///Finalizar Programa
-    printf("Programa finalizado.");
-    flagAdm=0;
+    case 2: /// Produtos
+    system("dados.exe");
     break;
+
 
     default:
     printf("erro no programs");
